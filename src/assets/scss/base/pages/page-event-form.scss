@@ -1,0 +1,47 @@
+
+#event-form {
+  background-color: #ebf5ff;
+  background-image: url('~@/assets/images/pages/event/form-background.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0px 32px 0px;
+  min-height: 100vh;
+
+  .event-form-content {
+    max-width: 640px;
+    min-height: calc(100vh - 170px);;
+
+    .custom-control {
+      margin-bottom: 18px;
+    }
+    .card-title {
+      font-size: 12px;
+
+      .icon-required {
+        color: red;
+      }
+    }
+    .form {
+      margin-bottom: 72px;
+    }
+    .input-form {
+      font-size: 12px;
+
+      span {
+        color: #6e6b7b;
+        font-size: 12px;
+      }
+    }
+    .vs__actions {
+      cursor: pointer;
+    }
+  }
+  .footer {
+    span {
+      color: #576c7f;
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+}

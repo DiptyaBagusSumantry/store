@@ -1,0 +1,101 @@
+@import '@core/scss/base/bootstrap-extended/variables';
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@/assets/scss/variables/variables';
+
+.profile-setting-tabs {
+  ul[role=tablist] {
+    &.nav {
+      justify-content: start;
+      padding-left: 0px;
+    }
+    & > li {
+      margin-bottom: 16px;
+
+      & > a {
+        width: 172px;
+        height: 37px;
+
+        &[aria-selected="true"] {
+          background: $gradient-primary !important;
+          box-shadow: $box-shadow-7 !important;
+          font-weight: 500;
+          border: 0 !important;
+        }
+        &[aria-selected="false"] {
+          font-weight: 400;
+          padding: 0.786rem 0;
+
+          @media (max-width: 1200px) {
+            font-weight: 600;
+            color: $primary;
+            border: solid 1px $primary;
+          }
+        }
+        &[aria-posinset="1"] {
+          @media (max-width: 1200px) {
+            margin-right: 1rem;
+          }
+
+          @media (max-width: 508px) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .nav-pills {
+    box-shadow: 5px 0px 13px -15px rgba(0, 0, 0, 0.4);
+    .nav-link {
+      justify-content: start !important;
+    }
+
+    @media (max-width: 1200px) {
+      box-shadow: 0px 5px 13px -15px rgba(0, 0, 0, 0.4);
+
+      .nav-link {
+        justify-content: center !important;
+      }
+    }
+  }
+
+  .profile-setting-form {
+    & > form {
+      width: 100%;
+    }
+
+    // .form-group {
+    //   label,.invalid-feedback {
+    //     font-size: 10px;
+    //   }
+    // }
+
+    .btn {
+      @include media-breakpoint-down(sm) {
+        width: 100% !important;
+      }
+    }
+
+    .form-group {
+      &.is-invalid {
+        // Vue Select
+        .v-select {
+          .vs__actions {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ea5455' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea5455' stroke='none'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-size: calc(0.725em + 0.438rem) calc(0.725em + 0.438rem);
+            background-position: right calc(0.3625em + 0.219rem) center;
+          }
+        }
+      }
+      .v-select {
+        .vs__selected-options {
+          input {
+            &::placeholder {
+              color: $gray-100 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

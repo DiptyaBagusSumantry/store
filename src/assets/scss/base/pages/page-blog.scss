@@ -1,0 +1,201 @@
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@core/scss/base/components/include';
+@import '@/assets/scss/variables/variables';
+
+.blog {
+  .articles {
+    h5 {
+      color: #93989B;
+      cursor: pointer;
+    }
+
+    .categories {
+      .category {
+        height: 100%;
+        width: 100%;
+        border-radius: 16px;
+        max-width: 282px;
+        max-height: 180px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+
+        img {
+          object-fit: cover
+        }
+        .label {
+          position: absolute;
+          top: 0px;
+          height: inherit;
+          width: inherit;
+        }
+      }
+    }
+  }
+  .btn-center {
+    border-color: white !important;
+  }
+  .empty-search {
+    height: 400px;
+  }
+  .VueCarousel {
+    &-navigation {
+      @include media-breakpoint-down(md) {
+        &-prev {
+          left: 70px !important;
+        }
+        &-next {
+          right: 70px !important;
+        }
+      }
+      .nav-carl {
+        circle {
+          stroke: white;
+        }
+        .feather {
+          filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.1));
+        }
+      }
+    }
+    &-inner {
+      margin: 15px 10px
+    }
+    &-slide {
+      flex-basis: initial !important;
+      margin-right: 20px;
+    }
+  }
+  .carousel {
+    &,.slide {
+      margin-bottom: 30px;
+    }
+    &-artikel {
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-indicators {
+      margin-bottom: -30px;
+
+      & > li {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #368AC8;
+
+        &[aria-current="false"] {
+          background-color: $product-button-disabled-color;
+        }
+      }
+    }
+    &-inner {
+      border-radius: 16px;
+      height: 500px;
+      position: relative !important;
+    }
+    &-item {
+      height: inherit;
+    }
+    &-caption {
+      top: 0 !important;
+      left: 0 !important;
+      padding: 0 !important;
+
+      background: linear-gradient(90deg, #283138 26.22%, rgba(40, 49, 56, 0) 100%);
+
+      height: inherit;
+      width: 100%;
+    }
+    &-content {
+      max-width: 450px;
+    }
+  }
+  .filter-blog {
+    ul {
+      margin-bottom: 4rem;
+
+      li {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        > a {
+          margin: 0px 8px;
+          width: 190px;
+          font-weight: 500;
+          border-radius: 24px;
+
+          &[aria-selected="false"] {
+            border: 1px solid $primary;
+            background-color: transparent;
+            color: $primary;
+          }
+          &[aria-selected='true'] {
+            border: 1px solid $primary;
+            background: linear-gradient(
+                279.57deg,
+                $toba-blue-secondary 0%,
+                $toba-blue 100%
+              ),
+              $toba-blue;
+          }
+        }
+      }
+    }
+  }
+  .input-group {
+    max-width: 476px;
+    margin-bottom: 60px;
+    .form-control {
+      background-color: #F4F5F5;
+      border-color: #F4F5F5;
+      border-radius: 0 8px 8px 0 !important;
+    }
+    .input-group-text {
+      background-color: #F4F5F5;
+      border-color: #F4F5F5;
+      border-radius: 8px 0 0 8px !important;
+      svg {
+       color: #93989B;
+      }
+    }
+  }
+
+  .pagination {
+    align-items: center;
+    .page-item {
+      .page-link {
+        background-color: white !important;
+        color: $toba-blue-secondary;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &.active {
+        .page-link {
+          width: 40px;
+          height: 40px;
+          background: linear-gradient(279.57deg, #70add9 0%, #368ac8 100%),
+            #368ac8;
+        }
+      }
+      &.disabled {
+        .page-link {
+          color: $product-button-disabled-color;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xs) {
+      .page-item {
+        flex: none !important;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .page-link {
+        padding: 0.4rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+
+@import "@/assets/scss/variables/_variables.scss";
+
+.invoice {
+  &-email {
+    color: #93989B;
+  }
+  &-detail {
+    &-pay {
+      h4 {
+        color: $primary;
+      }
+    }
+    &-price {
+      width: 188px;
+    }
+  }
+  &-btn {
+    &-pay {
+      button {
+        width: 150px;
+      }
+    }
+  }
+}

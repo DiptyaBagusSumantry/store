@@ -1,0 +1,32 @@
+.payment-modal {
+  .modal-dialog {
+    max-width: 895px !important;
+
+    .modal-body {
+      padding: 0 !important;
+    }
+    .modal-community {
+      width: 50%;
+      padding: 32px 0 32px 36px;
+    }
+  }
+}
+@media (max-width: 862px) {
+  .payment-modal {
+    .modal-dialog {
+      max-width: 500px !important;
+
+      .modal-body {
+        padding: 0 !important;
+
+        img {
+          width: 100%;
+        }
+      }
+      .modal-community {
+        width: 100%;
+        padding: 32px;
+      }
+    }
+  }
+}

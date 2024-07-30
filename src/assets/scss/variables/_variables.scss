@@ -1,0 +1,51 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding bootstrap variables.
+//  ================================================================================================
+
+// Shadow
+$box-shadow-7: -1px 4px 8px rgba(42, 129, 193, 0.5);
+
+// Color system
+
+$product-button-disabled-color: #c9cbcd;
+$product-red: #af1d11;
+$product-orange: #c25518;
+$product-yellow: #d3ae3c;
+$product-green: #1e5d5a;
+$product-greygreen: #90b6bb;
+$product-purple: #c0a9f7;
+
+$toba-black: #283138;
+$toba-blue: #368ac8;
+$toba-blue-secondary: #70add9;
+$toba-blue-dark: #195589;
+$toba-pink: #f5317f;
+$toba-pink-secondary: #ff7c6e;
+
+$gray-25: #fbfbfc !default;
+
+$primary: $toba-blue !default;
+
+// Background gradient
+$gradient-primary: linear-gradient(
+    279.57deg,
+    $toba-blue-secondary 0%,
+    $primary 100%
+  ),
+  $primary !default;
+
+// vertical menu
+$menu-expanded-width: 256px;
+$menu-collapsed-width: 0px;
+
+//  ------------------------------
+//    Sidebar
+//  -------------------------------
+$sidebar-width: 256px;
+$chat-sidebar-width: 360px;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color: #5e646a;
+$headings-color: #5e646a;

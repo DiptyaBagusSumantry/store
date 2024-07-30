@@ -1,0 +1,119 @@
+#app {
+  $content-padding: 9.714rem;
+  $content-padding-top: 8.438rem;
+
+  $content-landing-padding-top: 5.4rem;
+  $content-landing-padding: 7.5rem;
+
+  @include media-breakpoint-down(xs) {
+    footer {
+      margin-top: auto;
+    }
+  }
+
+  min-width: 375px;
+
+  .content.app-content {
+    padding: #{$content-padding-top} #{$content-padding} 30px #{$content-padding};
+
+    .content-wrapper {
+      width: 100%;
+      .content-body {
+        height: 100%;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 86px 16px 10px 16px !important;
+    }
+  }
+
+  &.page {
+    &-about,
+    &-landing,
+    &-faq {
+      .content.app-content {
+        padding: #{$content-landing-padding-top} 0 0 0;
+
+        @include media-breakpoint-down(md) {
+          padding: 64px 0 0 0 !important;
+        }
+      }
+    }
+    &-faq,
+    &-about,
+    &-event,
+    &-event-all,
+    &-blog,
+    &-blog-all,
+    &-payment-success,
+    &-payment-failed {
+      .content.app-content {
+        background: white !important;
+      }
+      footer.footer-light {
+        background: white !important;
+      }
+    }
+  }
+
+  /* Landing */
+  .landing-content {
+    padding-left: #{$content-landing-padding} !important;
+    padding-right: #{$content-landing-padding} !important;
+
+    /* Landing padding */
+    &.pt {
+      &-1 {
+        padding-top: 3.75rem !important;
+      }
+      &-2 {
+        padding-top: 5.625rem !important;
+      }
+      &-3 {
+        padding-top: 7.5rem !important;
+      }
+      &-4 {
+        padding-top: 9.375rem !important;
+      }
+
+      @include media-breakpoint-down(sm) {
+        &-1,
+        &-2,
+        &-3,
+        &-4 {
+          padding-top: 3.75rem !important;
+        }
+      }
+    }
+
+    &.pb {
+      &-1 {
+        padding-bottom: 3.75rem !important;
+      }
+      &-2 {
+        padding-bottom: 5.625rem !important;
+      }
+      &-3 {
+        padding-bottom: 7.5rem !important;
+      }
+      &-4 {
+        padding-bottom: 9.375rem !important;
+      }
+
+      @include media-breakpoint-down(sm) {
+        &-1,
+        &-2,
+        &-3,
+        &-4 {
+          padding-bottom: 3.75rem !important;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 1.75rem !important;
+      padding-right: 1.75rem !important;
+    }
+  }
+}

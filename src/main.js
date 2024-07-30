@@ -1,0 +1,63 @@
+import Vue from 'vue'
+import { ToastPlugin, ModalPlugin } from 'bootstrap-vue'
+import VueCompositionAPI from '@vue/composition-api'
+import VueYoutube from 'vue-youtube'
+
+import { init, vueRouterInstrumentation } from '@sentry/vue'
+import { BrowserTracing } from '@sentry/tracing'
+import router from './router'
+import store from './store'
+import App from './App.vue'
+
+// Global Components
+import './global-components'
+
+// 3rd party plugins
+import '@axios'
+import '@/libs/acl'
+import '@/libs/portal-vue'
+import '@/libs/toastification'
+// import '@/libs/push-notification'
+
+// Axios Mock Adapter
+import '@/@fake-db/db'
+
+// BSV Plugin Registration
+Vue.use(ToastPlugin)
+Vue.use(ModalPlugin)
+
+// Composition API
+Vue.use(VueCompositionAPI)
+
+Vue.use(VueYoutube)
+
+// Tracking using sentry
+init({
+  Vue,
+  dsn: process.env.VUE_APP_SENTRY_DSN,
+  logErrors: false,
+  integrations: [
+    new BrowserTracing({
+      routingInstrumentation: vueRouterInstrumentation(router),
+      tracingOrigins: [process.env.VUE_APP_SENTRY_TRACING, /^\//],
+    }),
+  ],
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
+})
+
+// import core styles
+require('@core/scss/core.scss')
+
+// import assets styles
+require('@/assets/scss/style.scss')
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  store,
+  render: h => h(App),
+}).$mount('#app')

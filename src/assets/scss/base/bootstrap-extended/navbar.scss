@@ -1,0 +1,75 @@
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@core/scss/base/components/include';
+
+.header-navbar {
+  .navbar-container {
+    #navbar-left {
+      .dropdown-item {
+        color: black;
+        font-weight: 500;
+      }
+      #dropdown-1,
+      #dropdown-3 {
+        & > .btn {
+          background-image: linear-gradient(
+            100deg,
+            $toba-blue,
+            $toba-blue-secondary
+          );
+          background-size: 100%;
+          background-repeat: repeat;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+
+          padding: 1rem 0rem 0rem 0rem;
+          &:hover {
+            background-color: white !important;
+          }
+        }
+        .dropdown-toggle::after {
+          background-image: none;
+        }
+      }
+      #dropdown-2 {
+        .btn-flat-secondary.dropdown-toggle::after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          margin-left: 70px;
+        }
+        .btn {
+          padding: 0.786rem 1.2rem;
+          color: black !important;
+          flex: none;
+        }
+      }
+      .btn-flat-secondary:focus {
+        background-color: #ffffff;
+      }
+    }
+    #navbar-right {
+      .btn {
+        width: 126px;
+      }
+    }
+    // Added more horizontal padding above small screen
+    //btn
+    .btn {
+      &-gradient {
+        &-primary {
+          &:hover {
+            background: linear-gradient(
+                279.9deg,
+                $toba-pink 0%,
+                rgba(245, 49, 127, 0) 100%
+              ),
+              $toba-pink-secondary !important;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 0.8rem 7.5rem !important;
+    }
+  }
+}

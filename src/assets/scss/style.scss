@@ -1,0 +1,89 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+// Base Styles
+@import 'base/bootstrap-extended/navbar';
+
+@import 'base/core/menu/menu-types/vertical-menu';
+@import 'base/core/layouts/content';
+
+// Custom gradient
+.bg {
+  &-gradient {
+    &-primary {
+      background: $gradient-primary !important;
+    }
+  }
+}
+.btn {
+  &-outline {
+    &-primary {
+      &:hover {
+        background: $gradient-primary;
+        color: #ffffff !important;
+        border: 0px solid transparent;
+      }
+    }
+  }
+  &-gradient {
+    &-primary {
+      background: $gradient-primary !important;
+    }
+  }
+}
+
+// Text
+.text {
+  &-black {
+    color: #283138;
+  }
+  &-toba {
+    &-gradient-pink {
+      background: -webkit-linear-gradient($toba-pink, $toba-pink-secondary);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+    &-gradient-blue {
+      background-image: linear-gradient(100deg, $toba-blue, $toba-blue-secondary);
+      background-size: 100%;
+      background-repeat: repeat;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+  }
+}
+
+// Modals
+.modal {
+  .modal-body {
+    padding: 1.8rem 2.4rem !important;
+  }
+  .modal-content {
+    & > .modal-header {
+      height: 0px !important;
+      padding: 0.2rem 1.2rem !important;
+    }
+  }
+}
+.modal-dialog-centered {
+  display: flex !important;
+  justify-content: center !important;
+}
+.modal-backdrop {
+  width: 100%;
+  height: 100%;
+}
+
+.b-avatar {
+  &.badge-none {
+    .b-avatar-badge {
+      display: none;
+    }
+  }
+}

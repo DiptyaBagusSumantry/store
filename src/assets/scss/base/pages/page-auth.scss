@@ -1,0 +1,21 @@
+@import '@core/scss/vue/pages/page-auth.scss';
+
+.auth-wrapper {
+  &.auth-v1 {
+    .auth-inner {
+      max-width: 540px !important;
+
+      &:before {
+        display: none !important;
+      }
+      &:after {
+        display: none !important;
+      }
+
+      .btn {
+        padding: 8px 1rem;
+        width: 150px;
+      }
+    }
+  }
+}

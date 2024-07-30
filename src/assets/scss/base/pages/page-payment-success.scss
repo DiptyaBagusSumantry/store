@@ -1,0 +1,22 @@
+@import "@/assets/scss/variables/_variables.scss";
+
+#payment-success {
+  height: 70vh;
+  background-image: url('~@/assets/images/pages/payment-success.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h3 {
+    color: $primary;
+  }
+  .btn + .btn {
+    text-decoration: underline;
+  }
+  .payment-success {
+    &-content {
+      max-width: 350px;
+      height: 350px;
+    }
+  }
+}

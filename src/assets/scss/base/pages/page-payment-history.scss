@@ -1,0 +1,86 @@
+@import '@core/scss/base/bootstrap-extended/include';
+
+#payment-history {
+  .nav {
+    &-tabs {
+      border-bottom: 1px solid #c9cbcd !important;
+    }
+    &-link {
+      font-weight: 400;
+      &.active {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        width: 115px;
+      }
+    }
+  }
+  .btn-outline-secondary {
+    font-weight: normal;
+    border: 1px solid #93989b !important;
+    color: #93989b !important;
+  }
+
+  .payment-history-table {
+    .table {
+      th {
+        background-color: #ebf3f9 !important;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        & > div {
+          text-transform: capitalize;
+        }
+      }
+      td {
+        padding: 1rem 1.5rem !important;
+      }
+      .badge.badge-light-purple {
+        background-color: #ebe8fe !important;
+        color: #7a62f9 !important;
+      }
+    }
+    .btn {
+      width: 100px !important;
+      padding: 0.786rem 0rem !important;
+      &.disabled {
+        opacity: 0.2 !important;
+      }
+    }
+    .custom-select {
+      background: #fff url('~@/assets/images/icons/chevron-down.svg') right 1rem
+        center/16px 16px no-repeat !important;
+      border: none !important;
+      color: #b9b9c3;
+
+      @include media-breakpoint-down(sm) {
+        border: 1px solid #d8d6de !important;
+      }
+
+      &-sm {
+        padding-right: 61px;
+      }
+    }
+
+    .page-item {
+      & > button {
+        color: #93989b;
+        font-weight: 600;
+      }
+      &.disabled {
+        .page-link {
+          color: #b9b9c3 !important;
+        }
+      }
+      &.prev-item,
+      &.next-item {
+        .page-link {
+          color: #368ac8;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
